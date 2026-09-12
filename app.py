@@ -63,7 +63,7 @@ def render_custom_probability_bar(class_name, prob_percent, color="#4A90E2"):
     
     
 # --- Main App Execution ---
-st.title(" OrbitalGaurd : Satellite Imagery Disaster Detection")
+st.title(" DisasterLens : Satellite Imagery Disaster Detection")
 st.markdown(
     "Upload a satellite image to classify natural disaster events "
     "**(Earthquake, Fire, Flood, Normal)** or run a batch prediction on test set samples."
