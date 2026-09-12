@@ -7,7 +7,7 @@ from src.model import ScratchCNN
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="DisastaLens",
+    page_title="DisasterLens",
     page_icon="🛰️",
     layout="wide"
 )
