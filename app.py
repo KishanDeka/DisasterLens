@@ -7,7 +7,7 @@ from src.model import ScratchCNN
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="OrbitalGaurd : Satellite Imagery & Natural Disaster Classifier",
+    page_title="DisastaLens",
     page_icon="🛰️",
     layout="wide"
 )
@@ -30,12 +30,12 @@ def load_model_and_config(weights_path = '../data/model/best_model.pth', stats_p
 # --- Helper to sample random test images ---
 def get_random_test_images(data_dir="data/", num_samples=4):
     """Recursively collects image paths from the Test directory and samples random paths."""
-    test_dir = os.path.join(data_dir,'testdata/')
+    test_dir = os.path.join(data_dir,'testdata')
     valid_extensions = ('.png', '.jpg', '.jpeg', '.tif', '.tiff')
     
     image_paths = []
-    if os.path.exists(data_dir):
-        for root, _, files in os.walk(data_dir):
+    if os.path.exists(test_dir):
+        for root, _, files in os.walk(test_dir):
             for file in files:
                 if file.lower().endswith(valid_extensions):
                     image_paths.append(os.path.join(root, file))
